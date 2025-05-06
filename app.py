@@ -3,6 +3,10 @@ import random
 
 app = Flask(__name__)
 
+@app.route('/')
+def index():
+    return "Hello from Gold Strategy API!"
+
 @app.route('/analyze', methods=['POST'])
 def analyze():
     data = request.json
